@@ -1,7 +1,7 @@
 -- Constants
 
 APP_REPO = "ONElua"
-APP_PROJECT = "EasyPowerRefresh"
+APP_PROJECT = "Easy-Power-Refresh"
 
 APP_VERSION_MAJOR = 0x01 -- major.minor
 APP_VERSION_MINOR = 0x00
