@@ -1,5 +1,5 @@
 # Easy Power Refresh
-**Power Options + NoNpDrm Games loader all together in one app!.**
+**Power Options + NoNpDrm Games Installer all together in one app!.**
 
 ![header](EasyPoweRefresh.png)
 
