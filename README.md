@@ -5,6 +5,13 @@
 
 ### Description ###
 This simple app was made for the users who wanted to have all the options mentioned above in the same vpk.
+
+### Changelog 2.00 ###
+**Changes thanks to Chronoss:**
+- Add Reload Config.txt.<br>
+- Add Conexion USB.<br>
+- New resources.<br>
+
 With Easy Power Refresh you'll get the next options in an easy to use menu:
 
 1. **Restart PSVita**   -> This option will restart the console.

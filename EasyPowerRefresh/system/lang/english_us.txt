@@ -1,0 +1,36 @@
+--Texts
+strings = {
+
+--Options Menu
+restart =		"Restart PSVita",
+shutdown =		"Shutdown PSVita",
+refreshdb =		"Update DB",
+reloadconfig =	"Reload Config.txt",
+usb =			"USB Connection Mode",
+nonmpdrm =		"NoNpDrm Games",
+
+--MessageBox
+configreload2 =	"\nTaiHen Config will be reloaded",
+configreload =	"\nTaiHen Config Sucess!",
+confirmdb =		"\nDo you really want to update your database ?\n\nThis is useful for PSM game",
+updatedb =		"\nYour PSVita will restart...\n\nPress X to continue ! ! !",
+nogames =		"\nNo NoNpDrm Games found",
+
+install =		"Installing...",
+notinstalled =	"\nGame not installed: ",
+gamesinst =		"\nTotal Installed Games: ",
+gamefind =		"\nGame(s) Detected: ",
+
+------------	USB 		---------------------------------------------------------------------------------
+usb =			"USB",
+connectusb =	"Connect a USB cable",
+usbconnection = "USB Connection Enabled",
+cancel =		"Cancel",
+cancelusb =		"Disabled",
+usbmode =		"Choose your USB Connection Mode",
+usbfail =		"Error... Conexion Failed",
+sd2vita =		"SD2Vita",
+memcard =		"Memory Card",
+gamecard =		"Game Card",
+
+}

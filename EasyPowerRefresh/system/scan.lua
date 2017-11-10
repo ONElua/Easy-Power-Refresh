@@ -1,12 +1,13 @@
 --[[ 
-	Easy Power Refresh.
+	Easy Power Refresh
 	
-	Licensed by GNU General Public License v3.0
+	Licensed by Creative Commons Attribution-ShareAlike 4.0
+	http://creativecommons.org/licenses/by-sa/4.0/
 	
-	Designed By:
-	- Gdljjrod (https://twitter.com/gdljjrod).
-	- BaltazaR4 (https://twitter.com/BaltazaR4).
+	Designed By Onelua Team.
+	Collaborators: Chrono & Wzjk.
 ]]
+
 
 scan, gamesd = {},0
 
@@ -50,21 +51,28 @@ function scan.app()
 end
 
 function scan.install()
-	local count = 0
-	os.cpu(444)
-	for i=1, #scan.apps do
-		title,version = scan.apps[i].title,scan.apps[i].version
-		buttons.homepopup(0)
-			result = game.refresh(scan.apps[i].path)
-		buttons.homepopup(1)
-		if result == 1 then
-			count+=1
-			gamesd-=1
-		else
-			os.message("Game not installed: "..scan.apps[i].id)
+	if gamesd > 0 then
+		local count = 0
+		os.cpu(444)
+		for i=1, #scan.apps do
+			
+			title,version = scan.apps[i].title,scan.apps[i].version
+			buttons.homepopup(0)
+				result = game.refresh(scan.apps[i].path)
+			buttons.homepopup(1)
+			if result == 1 then
+				count+=1
+				gamesd-=1
+			else
+				os.message(strings.notinstalled..scan.apps[i].id)
+			end
+			icon = nil
 		end
+		os.cpu(333)
+		os.message(strings.gamesinst..count)
+		--clean
+		scan.list, scan.apps = {},{}
+	else
+		os.message(strings.nogames)
 	end
-	os.cpu(333)
-	os.message("Total Installed Games: "..count)
-	scan.list, scan.apps = {},{}
 end

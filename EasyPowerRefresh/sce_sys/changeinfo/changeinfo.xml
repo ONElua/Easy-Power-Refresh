@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<changeinfo>
+  <changes app_ver="02.00">
+    <![CDATA[
+- Add Reload Config.txt.<br>
+- Add Conexion USB.<br>
+- New resources thanks to Chronoss.<br>
+    ]]>
+  </changes>
+  <changes app_ver="01.00">
+    <![CDATA[
+- Initial release 'POC'.<br>
+    ]]>
+  </changes>
+</changeinfo>

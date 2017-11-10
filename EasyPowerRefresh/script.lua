@@ -1,10 +1,23 @@
+--[[ 
+	Easy Power Refresh
+	
+	Licensed by Creative Commons Attribution-ShareAlike 4.0
+	http://creativecommons.org/licenses/by-sa/4.0/
+	
+	Designed By Onelua Team.
+	Collaborators: Chronoss & Wzjk.
+]]
+
+if not usb then os.requireusb() end--requiere for module USB
+
 game.close()
 color.loadpalette()
 
 back = image.load("resources/back.png")
+HDDpic = image.load("resources/HDD.png")
 
 if os.access() == 0 then
-	if back2 then back2:blit(0,0) end 
+	if back then back:blit(0,0) end 
 	screen.flip()
 	os.message("UNSAFE MODE is required for this Homebrew !!!",0)
 	os.exit()
@@ -14,11 +27,23 @@ end
 dofile("git/updater.lua")
 
 ------------------------------------------Main--------------------------------------------------------------
+__LANG = os.language()
+if files.exists("system/lang/"..__LANG..".txt") then dofile("system/lang/"..__LANG..".txt") 
+else dofile("system/lang/english_us.txt") end
+
+dofile("system/menu.lua")
 dofile("system/commons.lua")
 dofile("system/scan.lua")
+
+--Search Nonpdrm games
 scan.app()
-options = { "Restart PSVita", "Shutdown PSVita", "Update DB", "NoNpDrm Games"}
-sel = 1
+
+--Load Options Menu
+menuadv.wakefunct()
+local scroll = newScroll(menuadv.options, #menuadv.options)
+
+--Info (Devices) 
+infodevices()
 
 buttons.interval(10,12)
 while true do
@@ -26,41 +51,42 @@ while true do
 
 	if back then back:blit(0,0) end
 
-	screen.print(910,10,"Easy Power Refresh",1,color.white,color.blue,__ARIGHT)
+	screen.print(910,30,"Easy Power Refresh",1,color.white,color.blue,__ARIGHT)
+	screen.print(910,60,"v2.0",1,color.white,color.blue,__ARIGHT)
+
 	if gamesd > 0 then
-		screen.print(10,435,"Game(s) Detected: "..gamesd,1,color.white,color.blue,__ALEFT)
+		screen.print(10,435,strings.gamefind..gamesd,1,color.white,color.blue,__ALEFT)
 	end
 
 	local y = 30
-	for i=1,#options do
-		if i == sel then
-			draw.fillrect(48,y-2,175,21, color.blue:a(150))
-			draw.rect(48,y-2,175,21, color.green:a(100))
+	for i=scroll.ini,scroll.lim do
+		if i == scroll.sel then
+			draw.fillrect(42,y-2,331,21, color.red:a(150))
+			draw.rect(42,y-2,331,21, color.blue:a(125))
 		end
-		screen.print(49,y,options[i],1.0,color.white,color.gray,__ALEFT)
-		y += 25
+		screen.print(49,y, menuadv.options[i].text,1.0,color.white,color.gray,__ALEFT)
+		y+=25
 	end
+
+	if HDDpic then HDDpic:blit(870,428) end
+	
+if infouma0 then
+	screen.print(860,475,"uma0: "..infouma0.maxf.."/"..infouma0.freef,1,color.red,color.blue,__ARIGHT)
+	screen.print(860,455,"ur0: "..infour0.maxf.."/"..infour0.freef,1,color.yellow,color.blue,__ARIGHT)
+	end
+	screen.print(860,435,"ux0: "..infoux0.maxf.."/"..infoux0.freef,1,color.green,color.blue,__ARIGHT)
+	
 
 	screen.flip()
 
 	--Controls
-	if buttons.up then sel-=1 end
-	if buttons.down then sel+=1 end
+	if buttons.circle then os.exit() end
 
-	if sel > #options then sel=1 end
-	if sel < 1 then sel=#options end
+	if buttons.up or buttons.analogly < -60 then scroll:up() end
+	if buttons.down or buttons.analogly > 60 then scroll:down() end
 
 	if buttons.cross then
-		if sel == 1 then os.delay(500) power.restart()
-		elseif sel == 2 then os.delay(500) power.shutdown()
-			elseif sel == 3 then os.message("Your PSVita will Restart...\nand your database will be update")
-								 os.updatedb()
-								 os.delay(500)
-								 power.restart()
-				elseif sel == 4 then scan.install() buttons.homepopup(1)
-		end
+		menuadv.options[scroll.sel].funct()
 	end
-
-	if buttons.circle then os.exit() end
 
 end
