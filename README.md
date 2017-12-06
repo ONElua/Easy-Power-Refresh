@@ -1,11 +1,19 @@
 # Easy Power Refresh
 **Power Options + NoNpDrm Games Installer all together in one app!.**
 
-![header](EasyPoweRefresh.png)
+![header](EasyPoweRefreshIII.png)
 
 ### Description ###
 This simple app was made for the users who wanted to have all the options mentioned above in the same vpk.
 
+### Changelog 2.01 ###
+- Add Export Multimedia file : mp3, mp4, jpg, png (file must be in "ux0:Multimedia").<br>
+- Add an batterie indicator.<br>
+- New PIC0 and backgroung.<br>
+- New ressources thanks to Chronoss.<br>
+
+![header](EasyPoweRefreshIII.png)
+	
 ### Changelog 2.00 ###
 **Changes thanks to Chronoss:**
 - Add Reload Config.txt.<br>
