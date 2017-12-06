@@ -1,0 +1,49 @@
+--Texts
+strings = {
+
+--Options Menu
+restart =		"Reiniciar PSVita",
+shutdown =		"Apagar PSVita",
+refreshdb =		"Actualizar DB",
+reloadconfig =	"Recargar config.txt",
+usb =			"Conexión USB",
+nonmpdrm =		"Juegos NoNpDrm ",
+filesexport =	"Exportar Archivos Multimedia",
+exit =			"Salir",
+
+--MessageBox
+configreload =	"\nTaiHen Config Con Exito!",
+configreload2 =	"\nEl archivo TaiHen Config se volverá a recargar",
+confirmdb =		"\nDeseas Actualizar tu Base de Datos ?\n\nMuy util para juegos PSM",
+updatedb =		"\nTu PS Vita se reiniciará...\n\nPresiona X para continuar ! ! !",
+nogames =		"\nNo se encontraron juegos NoNpDrm",
+
+install =		"Instalando...",
+notinstalled =	"\nJuego no instalado: ",
+gamesinst =		"\nTotal de juegos instalados: ",
+gamefind =		"\nJuego(s) Detectado: ",
+
+------------	USB 		---------------------------------------------------------------------------------
+usb =			"USB",
+connectusb =	"Conecta un cable USB",
+usbconnection = "Conexion USB Habilitada",
+cancel =		"Cancelar",
+cancelusb =		"Desactivar",
+usbmode =		"Modo Conexion USB",
+usbfail =		"\nError... Falló la Conexion",
+sd2vita =		"Sd2Vita",
+memcard =		"Memory Card",
+gamecard =		"Game Card",
+
+------------	EXPORT		----------------------------
+fileexport =	"Exportar: \n\n",
+confirm =		"\nExportar Archivos Multimedia\n\n                Continuar ?",
+wait =			"\nEspere for favor...",
+nofile =		"\nNo se encontrarón archivos multimedia \n en la carpeta ux0:Multimedia",
+export =		"\nFunción completada, Por Favor abre las aplicaciones \n\nMusica/Fotos/Videos a leer tus archivos !",
+mp3s =			"Archivo(s) MP3: ",
+imgs =			"Archivo(s) IMG: ",
+mp4s =			"Archivo(s) MP4: ",
+fail =			"Error",
+
+}

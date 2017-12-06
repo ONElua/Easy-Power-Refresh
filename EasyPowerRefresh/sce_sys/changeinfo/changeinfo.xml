@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <changeinfo>
+  <changes app_ver="02.01">
+    <![CDATA[
+- Add Export Multimedia file : mp3, mp4, jpg, png (file must be in "ux0:Multimedia").<br>
+- Add an batterie indicator.<br>
+- New PIC0 and backgroung.<br>
+- New ressources thanks to Chronoss.<br>
+    ]]>
   <changes app_ver="02.00">
     <![CDATA[
 - Add Reload Config.txt.<br>

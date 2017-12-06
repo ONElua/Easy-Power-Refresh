@@ -22,11 +22,29 @@ function onAppInstall(step, size_argv, written, file, totalsize, totalwritten)
 		os.delay(10)
 		return 10 -- Ok
 	elseif step == 4 then											-- Installing
-		screen.print(910,30,"Easy Power Refresh",1,color.white,color.blue,__ARIGHT)
-		screen.print(910,60,"v2.0",1,color.white,color.blue,__ARIGHT)
+		screen.print(910,30,"Easy Power Refresh v2.0",0.9,color.white,color.blue,__ARIGHT)
+
+		if down then
+			down:blit(680,43)
+			down:blit(880,43)
+		end
+		screen.print(888,62,"All useful trick in one",0.9,color.white,color.blue,__ARIGHT)
+
+		if Bat then Bat:blit(900,500) end 			------ Icon bat
+		screen.print(880,519,batt.lifepercent().."%",2,color.white,color.blue,__ARIGHT)
+
+		if HDDpic then HDDpic:blit(870,428) end
+
+		screen.print(860,435,"ux0: "..infoux0.maxf.."/"..infoux0.freef,1,color.green,color.blue,__ARIGHT)
+		screen.print(860,455,"ur0: "..infour0.maxf.."/"..infour0.freef,1,color.yellow,color.blue,__ARIGHT)
+		if infouma0 then
+			screen.print(860,475,"uma0: "..infouma0.maxf.."/"..infouma0.freef,1,color.red,color.blue,__ARIGHT)
+		end
+
 		screen.print(70,50,strings.install,1,color.white,color.blue)
 		screen.print(10,435,title, 0.9, color.white, color.green, __ALEFT)
 		screen.print(10,470,version, 0.9, color.white, color.green, __ALEFT)
+
 		screen.flip()
 	end
 

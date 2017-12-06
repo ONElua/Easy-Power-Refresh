@@ -15,6 +15,9 @@ color.loadpalette()
 
 back = image.load("resources/back.png")
 HDDpic = image.load("resources/HDD.png")
+Bat = image.load("resources/bat.png")
+down = image.load("resources/down.png")
+Selector = image.load("resources/selector.png")
 
 if os.access() == 0 then
 	if back then back:blit(0,0) end 
@@ -51,8 +54,16 @@ while true do
 
 	if back then back:blit(0,0) end
 
-	screen.print(910,30,"Easy Power Refresh",1,color.white,color.blue,__ARIGHT)
-	screen.print(910,60,"v2.0",1,color.white,color.blue,__ARIGHT)
+	screen.print(910,30,"Easy Power Refresh v2.0",0.9,color.white,color.blue,__ARIGHT)
+
+	if down then
+		down:blit(680,43)
+		down:blit(880,43)
+	end
+	screen.print(888,62,"All useful trick in one",0.9,color.white,color.blue,__ARIGHT)
+	
+	if Bat then Bat:blit(900,500) end 			------ Icon bat
+	screen.print(880,519,batt.lifepercent().."%",2,color.white,color.blue,__ARIGHT)
 
 	if gamesd > 0 then
 		screen.print(10,435,strings.gamefind..gamesd,1,color.white,color.blue,__ALEFT)
@@ -61,21 +72,23 @@ while true do
 	local y = 30
 	for i=scroll.ini,scroll.lim do
 		if i == scroll.sel then
-			draw.fillrect(42,y-2,331,21, color.red:a(150))
-			draw.rect(42,y-2,331,21, color.blue:a(125))
+			if Selector then Selector:blit(40,y-5)
+			else
+				draw.fillrect(42,y-2,331,21, color.red:a(150))
+				draw.rect(42,y-2,331,21, color.blue:a(125))
+			end
 		end
-		screen.print(49,y, menuadv.options[i].text,1.0,color.white,color.gray,__ALEFT)
+		screen.print(80,y, menuadv.options[i].text,1.0,color.white,color.gray,__ALEFT)
 		y+=25
 	end
 
 	if HDDpic then HDDpic:blit(870,428) end
-	
-if infouma0 then
-	screen.print(860,475,"uma0: "..infouma0.maxf.."/"..infouma0.freef,1,color.red,color.blue,__ARIGHT)
-	screen.print(860,455,"ur0: "..infour0.maxf.."/"..infour0.freef,1,color.yellow,color.blue,__ARIGHT)
-	end
+
 	screen.print(860,435,"ux0: "..infoux0.maxf.."/"..infoux0.freef,1,color.green,color.blue,__ARIGHT)
-	
+	screen.print(860,455,"ur0: "..infour0.maxf.."/"..infour0.freef,1,color.yellow,color.blue,__ARIGHT)
+	if infouma0 then
+		screen.print(860,475,"uma0: "..infouma0.maxf.."/"..infouma0.freef,1,color.red,color.blue,__ARIGHT)
+	end
 
 	screen.flip()
 

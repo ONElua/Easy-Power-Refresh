@@ -4,14 +4,16 @@ strings = {
 --Options Menu
 restart =		"Redémarrer la PSVita",
 shutdown =		"Eteindre la PSVita",
-refreshdb =		"Mise à jour de la base de donnée",
-reloadconfig =	"Recharger config.txt du TaiHEN",
+refreshdb =		"MAJ de la base de donnée",
+reloadconfig =	"Recharger config.txt TaiHEN",
 usb =			"Connexion USB",
-nonmpdrm =		"Installation des jeux NoNpDrm",
+nonmpdrm =		"Installation Jeux NoNpDrm",
+filesexport =	"Exporter fichiers Multimédia",
+exit =			"Retour sur le Livearea",
 
 --MessageBox
-configreload2 =	"\nLe fichier config.txt va être recharger",
 configreload =	"\nFichier Config.tx rechargé avec succès !",
+configreload2 =	"\nLe fichier config.txt va être recharger",
 confirmdb =		"\nVoulez-vous vraiment mettre à jour la base de donnée ?\n\nCet option est utile pour l'installation des jeux PSM",
 updatedb =		"\nLa  PSVita va redémarrée, appuyez sur X pour continuer ! ! !",
 nogames =		"\nPas de jeu(x) NoNpDrm trouvé",
@@ -32,5 +34,16 @@ usbfail =		"\nErreur... Support non trouvé",
 sd2vita =		"SD2Vita",
 memcard =		"Memory Card",
 gamecard =		"Game Card",
+
+------------	EXPORT		----------------------------
+fileexport =	"Fichier en cours d'exportation : \n\n",
+confirm =		"\nVoulez-vous exporter tous les fichiers multimedia\n\n             du dossier 'Multimédia' ?",
+wait =			"\nMerci de patienter...",
+nofile =		"\nPas de fichier trouvé, veuillez placer les fichiers multimédia \n\n              dans le dossier 'ux0:Multimedia'",
+export =		"\nExportation terminée, veuillez lancer l'application\n\n   Musique/Photos/Vidéos pour lire vos fichiers !",
+mp3s =			"\nFichier(s) Musique : ",
+imgs =			"Fichier(s) Image : ",
+mp4s =			"Fichier(s) Vidéo : ",
+fail =			"Error",
 
 }

@@ -8,11 +8,13 @@ refreshdb =		"Update DB",
 reloadconfig =	"Reload Config.txt",
 usb =			"USB Connection Mode",
 nonmpdrm =		"NoNpDrm Games",
+filesexport =	"Export Multimedia Files",
+exit =			"Exit",
 
 --MessageBox
-configreload2 =	"\nTaiHen Config will be reloaded",
 configreload =	"\nTaiHen Config Sucess!",
-confirmdb =		"\nDo you really want to update your database ?\n\nThis is useful for PSM game",
+configreload2 =	"\nTaiHen Config will be reloaded",
+confirmdb =		"\nDo you really want to update your database ?\n\nThis is useful for PSM Games",
 updatedb =		"\nYour PSVita will restart...\n\nPress X to continue ! ! !",
 nogames =		"\nNo NoNpDrm Games found",
 
@@ -28,9 +30,20 @@ usbconnection = "USB Connection Enabled",
 cancel =		"Cancel",
 cancelusb =		"Disabled",
 usbmode =		"Choose your USB Connection Mode",
-usbfail =		"Error... Conexion Failed",
+usbfail =		"\nError... Conexion Failed",
 sd2vita =		"SD2Vita",
 memcard =		"Memory Card",
 gamecard =		"Game Card",
+
+------------	EXPORT		----------------------------
+fileexport =	"File being exported : \n\n",
+confirm =		"\nDo you want to export all multimedia files \n\n              from >Multimedia< folder ?",
+wait =			"\nPlease wait...",
+nofile =		"\nNo file found, please place multimedia files \n\n            in >ux0:Multimedia< folder",
+export =		"\nExport completed, please launch Music/Photos/Videos \n\n                application to read your files !",
+mp3s =			"\nMusic file(s) : ",
+imgs =			"Picture file(s) : ",
+mp4s =			"Movie file(s) : ",
+fail =			"Error",
 
 }
